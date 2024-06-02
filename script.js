@@ -1,25 +1,9 @@
 function stringChop(str, size) {
-  // your code here
-  let result=[]
-  let count=0
-  let sub=""
-  for(let t of str)
-  {
-    if(count<size){
-      sub+=t
-      count++
-      
-    }
-    else
-    {
-      result.push(sub)
-      sub=""
-      sub+=t
-      count=1
-    }
-    
-  }
-  result.push(sub)
+  if(!str) return []
+  let result=[];
+  for(let i=0;i<str.length;i=i+size)
+  result.push(str.slice(i,i+size))
+  
   return result
 }
 // Do not change the code below
